@@ -1,0 +1,2 @@
+# python_send2Phone
+使用python将消息推送到手机，目前支持Bark和Server酱
