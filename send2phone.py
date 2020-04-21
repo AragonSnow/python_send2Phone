@@ -57,7 +57,7 @@ def send2BarkAndWJ(title, content):
     try:
         msg = "{0}/推送标题/{1}/{2}?url=https://wj.qq.com".format(barklink, title, content)
         link = msg
-        # requests.get(link,verify=False)
+        requests.get(link,verify=False)
         s = "{\"id\":\"123456\",\"survey_type\":0,\"jsonLoadTime\":3,\"time\":1587372438,\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.113 Safari/537.36\",\"referrer\":\"https://wj.qq.com/mine.html\",\"openid\":\"\",\"pages\":[{\"id\":\"1\",\"questions\":[{\"id\":\"qID\",\"type\":\"text_multiple\",\"blanks\":[{\"id\":\"fID\",\"value\":\"dasdas\"}]}]}],\"latitude\":\"\",\"longitude\":\"\",\"is_update\":false}"
         s = s.replace("123456", wj["ID"])
         s = s.replace("qID", wj["问题ID"])
